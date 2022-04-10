@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 export const todosStyles = StyleSheet.create({
     goalsContainer: {
         flex: 4,
+        paddingBottom: 50
     },
     goalItem: {
         marginVertical: 10,
@@ -28,8 +29,13 @@ export const todosStyles = StyleSheet.create({
     },
     goalText: {
         color: "white",
-        fontWeight: '700',
-        fontSize: 18,
+        fontWeight: '600',
+        fontSize: 16,
+    },
+    goalTextCompleted: {
+        color: "white",
+        fontWeight: '300',
+        fontSize: 16,
     },
     // deleteBtnView: {
     //     borderRadius: 6,

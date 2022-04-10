@@ -40,6 +40,11 @@ export default function App() {
         });
         setGoalInput("");
     }
+    
+    function deleteGoalHandler(id) {
+        let newGoals = goals.todos.filter((goal, idx) => idx !== id);
+        setGoals(newGoals);
+    }
 
     function completeGoalHandler(id) {
         let update = goals.todos.map((item, idx) => {
@@ -51,11 +56,6 @@ export default function App() {
         });
 
         setGoals({ todos: update });
-    }
-
-    function deleteGoalHandler(id) {
-        let newGoals = goals.todos.filter((goal, idx) => idx !== id);
-        setGoals(newGoals);
     }
 
     return (
@@ -86,6 +86,7 @@ export default function App() {
                 goals={goals}
                 deleteGoalHandler={deleteGoalHandler}
                 completeGoalHandler={completeGoalHandler}
+                goalInputHandler={goalInputHandler}
             />
         </View>
     );
